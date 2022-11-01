@@ -1,0 +1,81 @@
+.footer {
+    background-color: $black;
+    text-align: center;
+    margin: 0;
+    padding: 80px 0 82px;
+  
+    .logo-holder {
+        width: 100%;
+        max-width: 168px;
+        margin: 0 auto;
+        padding-bottom: 8px;
+    }
+  
+    span {
+        font-family: $josefin-sans;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+        padding-bottom: 20px;
+    }
+  
+    .social-media-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .social-media-item {
+            padding-right: 30px;
+
+            &:last-child {
+                margin-right: 12px;
+            }
+
+            .social-media-link {
+                color: $white;
+                transition: color ease-in-out 0.3s;
+
+                .icon-facebook {
+                    font-size: 32px;
+
+                    &:hover {
+                        color: $accent;
+                    }
+                }
+              
+                .icon-twitter {
+                    font-size: 32px;
+
+                    &:hover {
+                        color: $accent;
+                    }
+                }
+              
+                .icon-linkedin {
+                    font-size: 32px;
+
+                    &:hover {
+                        color: $accent;
+                    }
+                }
+              
+                .icon-youtube {
+                    font-size: 32px;
+
+                    &:hover {
+                        color: $accent;
+                    }
+                }
+              
+                .icon-pinterest {
+                    font-size: 32px;
+
+                    &:hover {
+                        color: $accent;
+                    }
+                }
+            }
+        }
+    }
+}

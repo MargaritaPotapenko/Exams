@@ -1,0 +1,213 @@
+.header {
+    background-color: $accent;
+    position: fixed;
+    width: 100%;
+    padding: 28px 0;
+    z-index: 2;
+
+    .container {
+        display: flex ;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+
+        @include media('>=768px'){
+            padding: 40px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @include media('>=1024px'){
+            padding: 0 32px;
+            display: flex ;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include media('>=1360px'){
+            padding: 0 110px;
+        }
+
+        .logo-link {
+            color: $white;
+            font-family: $josefin-sans;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-align: center;
+
+            @include media('>=768px') {
+                position: absolute;
+                top: 24%;
+                right: 0;
+                left: 0;
+            }
+
+            @include media('>=1024px') {
+                position: relative;
+            }
+        }
+
+        .nav-holder {
+            @include animate(opacity visibility, 0.4s);
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: $accent;
+            opacity: 0;
+            visibility: hidden;
+
+            @include media('>=768px') {
+                opacity: 1;
+                visibility: visible;
+                display: flex;
+                flex-wrap: wrap;
+                position: absolute;
+                top: 62%;
+                left: 0;
+                right: 0;
+            }
+
+            @include media('>=1024px') {
+                position: static;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .nav-list {
+            position: relative;
+            padding: 0;
+
+            @include media('>=768px') {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0;
+            }
+
+            .nav-item {
+                
+                &:nth-child(1) {
+                    margin: 32px 0 24px;
+                }
+                &:nth-child(3) {
+                    margin: 24px 0 24px;
+                }
+                &:nth-child(4) {
+                    margin: 0 0 32px 0;
+                }
+
+                @include media('>=768px') {
+                    &:nth-child(1) {
+                        margin: 0 40px 0 0;
+                    }
+
+                    &:nth-child(2) {
+                        margin: 0 40px 0 0;
+                    }
+
+                    &:nth-child(3) {
+                        margin: 0 40px 0 0;
+                    }
+
+                    &:nth-child(4) {
+                        margin: 0 ;
+                    }
+                }
+            }
+
+            li {
+                padding: 0 15px;
+                text-align: center;
+            }
+            
+            .nav-link {
+                color: $white;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                font-family: $aleo;
+                text-align: center;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        .nav-opener {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 40px;
+            height: 24px;
+        
+            @include media('>=768px') {
+                display: none;
+            }
+        
+            &.active {
+                
+                span {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+        
+                &:before {
+                    transform: rotate(-45deg);
+                    top: 41%;
+                }
+        
+                &:after {
+                    transform: rotate(45deg);
+                    bottom: 50%;
+                }
+            }
+        
+            span,
+            &:before,
+            &:after {
+                @include animate(all, 0.4s);
+                position: absolute;
+                left: 0;
+                content: '';
+                width: 40px;
+                height: 2px;
+                background-color: $white;
+            }
+        
+            &:before {
+                top: 0;
+            }
+        
+            &:after {
+                bottom: 0;
+            }
+        
+            span {
+               top: 50%;
+               transform: translateY(-50%);
+            }
+        }
+    }
+}

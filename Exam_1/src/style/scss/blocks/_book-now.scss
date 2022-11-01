@@ -1,0 +1,67 @@
+.book-now {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+
+    .container {
+        padding: 120px 18px;
+        margin: 0 auto;
+
+        @include media('>=1024px') {
+            padding: 220px 110px 120px;
+        }  
+    }
+
+    .content-holder {
+        align-items: center;
+        background-color: $grey;
+        margin: 0 auto;
+        padding: 44px 32px;
+    
+        @include media('>=1024px') {
+          width: 100%;
+          max-width: 550px;
+          margin-left: 0;
+        }
+    
+        &.content-holder.second {
+            @include media('>=1024px'){
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
+    
+        .text-holder {
+            padding-bottom: 24px;
+
+            p {
+                line-height: 28px;
+                font-size: 20px;
+                letter-spacing: 0.1em;
+                padding-bottom: 28px;
+                font-weight: 300;
+                font-family: $josefin-sans;
+              }
+        }
+    
+        .btn {
+            text-align: center;
+        }
+
+        .pseudo-title {
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 0.1em;
+            padding-bottom: 16px;
+            font-weight: 300;
+          }
+        
+          h3 {
+            padding-bottom: 16px;
+          }
+        
+          
+    }
+}
+

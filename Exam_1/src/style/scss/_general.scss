@@ -1,0 +1,144 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: $aleo, $josefin-sans;
+    font-size: 16px;
+    color: $white;
+}
+
+main {
+    padding-top: 84px;
+
+    @media screen and (min-width:768px) {
+        padding-top: 136px;
+    }
+
+    @media screen and (min-width:1024px) {
+        padding-top: 84px;
+    }
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    text-transform: uppercase;
+    font-family: $josefin-sans;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: capitalize;
+    font-family: $aleo;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.pseudo-title {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+}
+
+p {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    font-family: $josefin-sans;
+    color: $white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px 32px;
+    width: 100%;
+    max-width: 213px;
+    background-color: $accent;
+    font-size: $aleo;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    outline: none;
+  
+    span {
+      position: relative;
+      z-index: 2;
+    }
+  
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      background-color: $accent-darker;
+      z-index: 1;
+      transform: translateX(-60%) skewX(45deg);
+      transition: all ease-in-out 0.4s;
+    }
+  
+    &:hover:before {
+      transform: translateX(60%) skewX(45deg);
+      right: 0;
+      left: unset;
+      outline: none;
+      border: none;
+    }
+  }
+  
+.btn-search {
+    display: inline-block;
+    position: relative;
+    padding: 16px 24px 16px 52px;
+    background-color: $accent;
+    font-size: $aleo;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    text-decoration: none;
+    border: none;
+    transition: background-color ease-in-out 0.4s;
+  
+    &:before {
+      content: "\e907";
+      font-family: 'icomoon';
+      position: absolute;
+      top: 48%;
+      left: 24px;
+      transform: translateY(-50%);
+    }
+  
+    &:hover {
+      background-color: $dark-grey;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
